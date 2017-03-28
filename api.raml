@@ -1,8 +1,6 @@
 #%RAML 1.0
 
 title: this is a test
-types:
-  Thing: !include types/mytype.raml
 
 /hello:
   get:
@@ -10,4 +8,5 @@ types:
       200:
         body:
           application/json:
-            Thing
+            properties:
+              data: string
